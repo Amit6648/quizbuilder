@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    /* Base Options */
+    "target": "es2022",                       // Modern Node supports ES2022+
+    "module": "nodenext",                     // Use native ESM (import/export)
+    "moduleResolution": "nodenext",           // Strict Node.js resolution
+    "rootDir": "./src",
+    "outDir": "./dist",
+
+    /* Strictness & Best Practices */
+    "strict": true,
+    "esModuleInterop": true,                  // Allows importing CommonJS modules nicely
+    "forceConsistentCasingInFileNames": true, // Prevents case-sensitivity bugs
+    "skipLibCheck": true,                     // Speeds up compilation
+    
+    /* Improvements for Prisma/Backend */
+    "resolveJsonModule": true,                // Allows importing .json files
+    "sourceMap": true                         // Helps with debugging
+  },
+  "include": ["src/**/*"]
+}
