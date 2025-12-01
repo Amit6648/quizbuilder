@@ -35,8 +35,9 @@ export const pdfToText = async (file: Buffer) => {
 
 
             const ogTopic = await orginize(data.text);
+            const result  = await saveSourceAndTopics(ogTopic); 
 
-            return ogTopic;
+            return result;
 
         }
 
@@ -65,8 +66,10 @@ export const pdfToText = async (file: Buffer) => {
         console.log("done processing now sending the data to api");
 
         const ogTopic = await orginize(ocr);
-        const result = await saveSourceAndTopics(ogTopic); 
-        return ogTopic;
+        const result  = await saveSourceAndTopics(ogTopic); 
+        console.log(result);
+        
+        return result;
 
 
     } catch (error: any) {
